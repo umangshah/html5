@@ -3,8 +3,12 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <title>Blue Developer Directory</title>
+<script type="text/javascript">
+    function outputBudget(budget) {
+        document.querySelector('#budgetOutput').value = budget;
+    }
+</script>
 </head>
-
 <body>
 <div id="container">
     <header>
@@ -46,11 +50,11 @@
             </p>
             <p>
                 <label for="email">Email Address: </label>
-                <input type="text" name="email">
+                <input type="email" name="email">
             </p>
             <p>
                 <label for="phone">Phone Number: </label>
-                <input type="text" name="phone">
+                <input type="tel" name="phone">
             </p>
             <p>
                 <label for="time">Best Time To Call: </label>
@@ -59,33 +63,55 @@
                 <input type="radio" name="time" value="evening">Evening
             </p>
             <p>
-                <label for="budget">Budget: </label>
-                <select name="budget">
-                    <option>--Please Select--</option>
-                    <option value="100-500">$100 - $500</option>
-                    <option value="500-1000">$500 - $1000</option>
-                    <option value="1000-2000">$1000 - $2000</option>
-                    <option value="2000+">$2000+</option>
-                    <option value="not sure">Not Sure</option>
-                </select>
+                <label for="location" >Location: </label>
+                <input list="location">
+                <datalist id="location">
+                    <option value="New York">
+                    <option value="Boston">
+                    <option value="Miami">
+                </datalist>
             </p>
-            <p>
-                <label for="services">Services Needed: (Check all that apply) </label>
-                <table>
-                    <tr>
-                        <td><input type="checkbox" name="services" value="html">html</td>
-                        <td><input type="checkbox" name="services" value="php">PHP</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="services" value="asp">ASP</td>
-                        <td><input type="checkbox" name="services" value="java">Java</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="services" value="c">C++</td>
-                        <td><input type="checkbox" name="services" value="design">Design</td>
-                    </tr>
-                </table>
-            </p>
+            <fieldset>
+                <legend>About Your Project</legend>
+                <p>
+                    <label for="budget">Budget: </label>
+                    <input type="range" min="500" max="10000" value="5000" name="budget" oninput="outputBudget(value)">
+                    <output for="budget" id="budgetOutput">5000</output>
+                </p>
+                <p>
+                    <label for="services">Services Needed: (Check all that apply) </label>
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" name="services" value="html">html</td>
+                            <td><input type="checkbox" name="services" value="php">PHP</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="services" value="asp">ASP</td>
+                            <td><input type="checkbox" name="services" value="java">Java</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="services" value="c">C++</td>
+                            <td><input type="checkbox" name="services" value="design">Design</td>
+                        </tr>
+                    </table>
+                </p>
+                <p>
+                    <label for="website">Current Website: </label>
+                    <input type="url" name="website">
+                </p>
+                <p>
+                    <label for="date">Start Date: </label>
+                    <input type="date" name="startDate">
+                </p>             
+                <p>
+                    <label for="pages">Number of Pages: </label>
+                    <input type="number" name="pages">
+                </p>
+                <p>
+                    <label for="color">Main Website Color: </label>
+                    <input type="color" name="color">
+                </p>                   
+            </fieldset>
             <p>
                 <input type="submit" value="Submit Inquiry">
             </p>
