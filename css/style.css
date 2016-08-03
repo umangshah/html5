@@ -93,34 +93,24 @@ header h2{
 }
 
 #menu{
-	display:block;
-	float:left;
-	clear:both;
-	width:960px;
-	height:54px;
-	float:left;
-	clear:both;
+    height:54px;
 }
 
 #menu ul {
 	list-style: none;
 	padding: 0px;
-	margin-left:auto;
-	width:960px;
 }
 
 #menu li {
 	list-style: none;
-	padding: 0px;	
-	display: inline; 
+        position: relative;
+        float: left;
 	
 }
 
 #menu a {
-	float: left;
-	height: 36px;
+        height: 36px;
 	display: block;
-	text-align: center;
 	text-decoration: none;
 	color: #ffffff;
 	font-weight: bold;
@@ -128,13 +118,32 @@ header h2{
 	font-size: 15px;
 	padding-left:13px;
 	padding-right:13px;
-	
 }
 
-#menu a:hover{
+#menu a:hover {
 	color:#86AEF9;
+        background: #fff;
 }
 
+#menu li ul 
+{
+    display: none;
+    width: 100%;
+}
+#menu li:hover ul {
+    display: block; 
+    position: absolute;
+}
+
+#menu li:hover li {
+    float: none;
+}
+
+#menu li ul li
+{
+    background: #1c478e;
+    list-style: none;
+}
 
 .blue-text{
 	color:#67A0F5;

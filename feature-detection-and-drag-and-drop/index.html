@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Drag and Drop</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/drag-and-drop.css" />
+        <!-- Reference: http://www.w3schools.com/html/html5_draganddrop.asp -->
+        <script type="text/javascript" src="../js/feature-detection.js"></script>
+        <script type="text/javascript" src="../js/drag-and-drop.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <header>
+        <h1><span class="blue-text">Blue</span> Developer Directory</h1>
+        <h2>Find A Developer <span class="white-text">NOW</span></h2>
+    </header><!--header end-->
+        
+    <nav id="menu">
+        <ul>
+            <li class="menuitem"><a href="../index.html">Home</a></li>
+            <li class="menuitem"><a href="../about.html">About Us</a></li>
+            <li class="menuitem"><a href="../browse.html">Browse Developers</a></li>
+            <li class="menuitem"><a href="../contact.html">Contact Us</a></li>
+            <li class="menuitem"><a href="#">HTML5 Examples</a>
+                <ul>
+                    <li class="submenuitem"><a href="./index.html">Drag and Drop</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+    </nav>
+    <nav id="leftmenu">
+        <h3>Links</h3>
+        <ul>
+            <li><a href="browse.html">SEO</a></li>
+            <li><a href="browse.html">PHP</a></li>
+            <li><a href="browse.html">Ajax</a></li>
+            <li><a href="browse.html">jQuery</a></li>
+            <li><a href="browse.html">Web design</a></li>
+            <li><a href="browse.html">Web Programming</a></li>
+            <li><a href="browse.html">Content Creation</a></li>
+            <li><a href="browse.html">Internet Marketing</a></li>
+            <li><a href="browse.html">XHTML Templates</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <h1>Drag the html5 logo into the box</h1>
+        <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>    
+        <img src="html5.jpg" id="logo" draggable="true" ondragstart="drag(event);" />
+    </section>
+</body>
+</html>
