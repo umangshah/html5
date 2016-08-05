@@ -3,8 +3,15 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <title>Blue Developer Directory</title>
+<style type="text/css">
+    #map {
+        width: 400px;
+        height: 250px;
+        float: left;
+    }
+</style>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 </head>
-
 <body>
 <div id="container">
     <header>
@@ -17,7 +24,6 @@
             <li class="menuitem"><a href="index.html">Home</a></li>
             <li class="menuitem"><a href="about.html">About Us</a></li>
             <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
-            <li class="menuitem"><a href="register.html">Register As Developer</a></li>
             <li class="menuitem"><a href="contact.html">Contact Us</a></li>
             <li class="menuitem"><a href="#">HTML5 Examples</a>
                 <ul>
@@ -43,29 +49,37 @@
             <li><a href="browse.html">XHTML Templates</a></li>
         </ul>
     </nav>
-    
+
     <section>
-        <h2>Blue Developer Directory! </h2>
-       	<h3>Who Are We?</h3>
-        <p>We are a fictional website and service that list top web developers around the world. Search and browse fictional web developers on our website absolutley FREE!</p>
-		<h3>What Skills Do Our Developers Have?</h3>
-        <p>Our listed fictional web developers skill ranges from Graphic design with Photoshop, Illustrator and Fireworks to markup languages like HTML5, XHTML and XML to programming languages such as Javascript, PHP, Python and ASP</p>
-        <video id="ad" width="420" height="350" controls>
-            <source src="video/ad.mp4" type="video/mp4">
-            Please update your browser
-        </video>
-        <div style="width:400px;">
-            <button onclick="playPause()">Play/Pause</button>
-            <button onclick="makeBig()">Big</button>
-            <button onclick="makeSmall()">Small</button>
-            <button onclick="makeNormal()">Normal</button>
-        </div>
+        <h3>Register As A Developer</h3>
+	<form method="post" action="somescript.php">
+            <p>
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name">
+            </p>
+            <p>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="text" name="email">
+            </p>
+            <p>
+                <label for="location">Location:</label>
+                <div id="map"></div>
+            </p>
+            <p style="clear: both;"></p>
+            <p style="padding-top: 10px;">
+                <input type="submit" value="Register">
+            </p>
+        </form>
+        <script type="text/javascript" src="js/register.js"></script>
     </section><!--content end-->
 </div><!--container end-->
 <div style="clear:both;"></div>
 <footer>
     Copyright 2016, Blue Developer Directory
 </footer>
-<script type="text/javascript" src="js/about.js"></script>
 </body>
 </html>
