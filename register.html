@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
-<title>Blue Developer Directory</title>
+<script type="text/javascript" src="js/newsletter.js"></script>
 <style type="text/css">
     #map {
         width: 400px;
@@ -11,7 +11,9 @@
     }
 </style>
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<title>Blue Developer Directory</title>
 </head>
+
 <body>
 <div id="container">
     <header>
@@ -24,6 +26,7 @@
             <li class="menuitem"><a href="index.html">Home</a></li>
             <li class="menuitem"><a href="about.html">About Us</a></li>
             <li class="menuitem"><a href="browse.html">Browse Developers</a></li>
+            <li class="menuitem"><a href="register.html">Register As Developer</a></li>            
             <li class="menuitem"><a href="contact.html">Contact Us</a></li>
             <li class="menuitem"><a href="#">HTML5 Examples</a>
                 <ul>
@@ -31,25 +34,52 @@
                     <li class="submenuitem"><a href="./canvas/index.html">Canvas Element</a></li>
                     <li class="submenuitem"><a href="./svg/index.html">SVG</a></li>
                 </ul>
-            </li>            
+            </li>
         </ul>
+        <div id="displayname">
+            <script type="text/javascript">
+                displayName();
+            </script>
+        </div>
     </nav>
 	
-    <nav id="leftmenu">
-        <h3>Links</h3>
-        <ul>
-            <li><a href="browse.html">SEO</a></li>
-            <li><a href="browse.html">PHP</a></li>
-            <li><a href="browse.html">Ajax</a></li>
-            <li><a href="browse.html">jQuery</a></li>
-            <li><a href="browse.html">Web design</a></li>
-            <li><a href="browse.html">Web Programming</a></li>
-            <li><a href="browse.html">Content Creation</a></li>
-            <li><a href="browse.html">Internet Marketing</a></li>
-            <li><a href="browse.html">XHTML Templates</a></li>
-        </ul>
-    </nav>
-
+    <aside>
+        <nav id="leftmenu">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="browse.html">SEO</a></li>
+                <li><a href="browse.html">PHP</a></li>
+                <li><a href="browse.html">Ajax</a></li>
+                <li><a href="browse.html">jQuery</a></li>
+                <li><a href="browse.html">Web design</a></li>
+                <li><a href="browse.html">Web Programming</a></li>
+                <li><a href="browse.html">Content Creation</a></li>
+                <li><a href="browse.html">Internet Marketing</a></li>
+                <li><a href="browse.html">XHTML Templates</a></li>
+            </ul>
+        </nav>
+        <div class="clearboth"></div>
+        <div id="newsletter">
+            <h3>Newsletter</h3>
+            <script type="text/javascript">
+                showText();
+            </script>
+            <form name="newsletter" onsubmit="submitNewsletter(this);">
+                <p>
+                    <label for="username">Name</label>
+                    <input type="text" name="username" id="username" />
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" />
+                </p>
+                <p>
+                    <button name="submit">Submit</button>
+                </p>
+            </form>
+        </div>
+    </aside>
+    
     <section>
         <h3>Register As A Developer</h3>
 	<form method="post" action="somescript.php">

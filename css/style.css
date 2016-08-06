@@ -116,8 +116,8 @@ header h2{
 	font-weight: bold;
 	padding-top: 18px;
 	font-size: 15px;
-	padding-left:13px;
-	padding-right:13px;
+	padding-left:7px;
+	padding-right:7px;
 }
 
 #menu a:hover {
@@ -168,7 +168,7 @@ header h2{
 }
 
 
-#leftmenu h3{
+#leftmenu h3, #newsletter h3{
 	list-style: none;
 	padding: 0px;
 	color:#FFFFFF;
@@ -264,4 +264,45 @@ footer {
     background: black;
     padding: 10px 0 10px 0;
     margin: 20px;
+}
+
+#newsletter {
+    padding:10px; 
+    margin-top: 15px; 
+    background-color: #1C478E; 
+    border-radius: 10px;
+    color: white;
+}
+
+#newsletter span {
+    margin-top: 10px;
+    display: block;
+}
+
+#newsletter input {
+    margin: 0px;
+}
+
+#newsletter a {
+    color: white;
+    text-decoration: none;
+}
+#newsletter label {
+    width: 60px;
+}
+
+#displayname {
+    color: white;
+    float: right;
+    padding-top: 18px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+aside {
+    float: left;
+}
+
+.clearboth {
+    clear: both;
 }
