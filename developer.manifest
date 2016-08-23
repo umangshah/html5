@@ -1,0 +1,17 @@
+CACHE MANIFEST
+#2016-08-22
+
+CACHE:
+index.html
+info.html
+css/style.css
+js/newsletter.js
+images/background.png
+images/web.jpg
+
+#Require the user to be online
+NETWORK:
+login.php
+
+FALLBACK:
+*.html offline.html

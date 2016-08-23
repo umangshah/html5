@@ -272,6 +272,7 @@ footer {
     background-color: #1C478E; 
     border-radius: 10px;
     color: white;
+    width: 190px;
 }
 
 #newsletter span {
@@ -305,4 +306,8 @@ aside {
 
 .clearboth {
     clear: both;
+}
+
+.textWhite {
+    color: white;
 }
